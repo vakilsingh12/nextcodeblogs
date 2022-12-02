@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import Styles from "../styles/Blog.module.css";
 import * as fs from "fs";
 import InfiniteScroll from "react-infinite-scroll-component";
-const blog = ({ allblog,allcount }) => {
+const blog = ({ allblog, allcount }) => {
   const [blogData, setAllblog] = useState(allblog);
   const [count, setcount] = useState(2);
   const fetchMoreData = async () => {
-    let d = await fetch(`http://localhost:3000/api/blogs/?count=${count+2}`);
-    setcount(count+2)
+    let d = await fetch(`http://localhost:3000/api/blogs/?count=${count + 2}`);
+    setcount(count + 2);
     let data = await d.json();
     setAllblog(data);
   };
@@ -19,7 +19,7 @@ const blog = ({ allblog,allcount }) => {
         <InfiniteScroll
           dataLength={blogData.length}
           next={fetchMoreData}
-          hasMore={blogData.length!==allcount}
+          hasMore={blogData.length !== allcount}
           loader={<h4>Loading...</h4>}
           endMessage={
             <p style={{ textAlign: "center" }}>
@@ -49,7 +49,7 @@ const blog = ({ allblog,allcount }) => {
 };
 export async function getStaticProps(context) {
   let data = await fs.promises.readdir(`blogdata`);
-  let allcount=data.length
+  let allcount = data.length;
   let allblog = [];
   for (let index = 0; index < 2; index++) {
     let item = data[index];
@@ -59,7 +59,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       allblog,
-      allcount
+      allcount,
     },
   };
 }
