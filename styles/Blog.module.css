@@ -1,0 +1,30 @@
+.blog {
+    width:70vw;
+    padding-top: 15px;
+    text-align: center;
+    margin: auto;
+  }
+  .innerDev h2{
+    cursor: pointer;
+    text-align: justify;
+  }
+  .innerDev p{
+    text-align: justify;
+  }
+  .btnPrimary{
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: green;
+    color: aliceblue;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease;
+    }
+    .btnPrimary:hover{
+        background-color: #000;
+        color: white;
+    }

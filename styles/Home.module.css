@@ -1,8 +1,8 @@
-.container {
+/* .container {
   padding: 0 2rem;
 }
 
-.main {
+li {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -64,13 +64,12 @@
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
-
+*/
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  width: 70vw;
+  padding-top: 15px;
+  text-align: center;
+  margin: auto;
 }
 
 .card {
@@ -84,7 +83,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
-
+/**
 .card:hover,
 .card:focus,
 .card:active {
@@ -125,5 +124,41 @@
   }
   .logo img {
     filter: invert(1);
+  }
+} */
+.head {
+  font-size: 3.5rem;
+}
+.mainNav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin-top: 30px;
+}
+.mainNav ul li {
+  margin: 0 24px;
+  font-weight: bold;
+}
+.mainNav ul a {
+  text-decoration: none;
+  color: #000;
+}
+.myImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+@media only screen and (max-width: 600px) {
+  .mainNav ul li{
+    margin: 0 6px;
+  }
+  .head{
+    font-size: 1.3rem;
+  }
+  .mainHead{
+    font-size: 1.2rem;
+  }
+  .subHead{
+    font-size: 1rem;
   }
 }

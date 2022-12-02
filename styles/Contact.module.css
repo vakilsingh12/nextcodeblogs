@@ -1,0 +1,46 @@
+.container {
+  max-width: 45vw;
+  margin: auto;
+}
+.mb3 {
+  margin-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+}
+.head {
+  text-align: center;
+}
+.formLabel {
+  padding-bottom: 4px;
+  margin: 0;
+}
+.formControl {
+  padding: 5px 8px;
+  border-radius: 2px;
+  border: 1px solid #000;
+  outline: none;
+}
+.btnPrimary {
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: green;
+  color: aliceblue;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  transition: all 0.3s ease;
+}
+.btnPrimary:hover {
+  background-color: #000;
+  color: white;
+}
+/* @media only screen and (max-width: 600px) { */
+@media only screen and (max-width:600px) {
+  .container {
+    max-width: 70vw;
+    margin: auto;
+  }
+}
